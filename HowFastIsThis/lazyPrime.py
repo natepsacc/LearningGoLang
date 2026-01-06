@@ -15,6 +15,7 @@ def main():
     return primes
 
 if __name__ == "__main__":
+
     startTime = time.perf_counter()
     primes = main()
     endTime = time.perf_counter()

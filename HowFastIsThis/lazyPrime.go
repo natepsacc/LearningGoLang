@@ -25,5 +25,4 @@ func main() {
 	elapsed := time.Since(startTime) //.Since, Nice!
 
 	fmt.Printf(fmt.Sprintf("identified %d primes in %s seconds", len(primeSlice), elapsed))
-
 }
