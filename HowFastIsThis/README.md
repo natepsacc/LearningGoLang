@@ -1,4 +1,4 @@
-#Wow, compiled to machine code is infact faster that compiled on runtime.
+**Wow, compiled to machine code is infact faster that compiled on runtime.**
 
 Started with lazyPrime.go and lazyPrime.py, with the understanding of the more fundemental diffs going into this.  However, it is fun to see how the tremendous speed delta between the two implementations fo the algo.
 

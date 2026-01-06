@@ -1,4 +1,4 @@
-## Notes on learning goLang as they come
+** Notes on learning goLang as they come**
 I am nearly finished with Memory (Craik, Jacoby).  Meaning = Learning, digesting == defer meaning, knowing > recollecting. So silly notes with no real structure :).
 
 All files in a dir with the same package declaration will compile together.  This means we can call functions from seperate files without importing them given they have the same package and location.
