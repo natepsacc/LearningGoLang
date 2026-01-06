@@ -9,9 +9,9 @@ func main() {
 	startTime := time.Now()
 	max := 100000
 	primeSlice := []int{}
-	for x := 0; x < max; x++ { 
+	for x := 2; x < max; x++ { 
 		prime := true
-		for y := 2; y < x -1; y ++ {
+		for y := 2; y*y <=x; y ++ {
 			if x % y == 0 {
 				prime = false
 				break

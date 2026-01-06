@@ -4,9 +4,9 @@ import time
 def main():
     max = 100000
     primes = []
-    for x in range ( max):
+    for x in range (2, max):
         prime = True
-        for y in range(2, x-1):
+        for y in range(2, int(x**0.5) + 1):
             if x % y == 0:
                 prime = False
                 break
