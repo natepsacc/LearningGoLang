@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-//	"time"
+  "time"
 )
 
 func primeLoop(startNum int, maxNum int, respChannel chan []int)  {
@@ -32,7 +32,7 @@ func primeLoop(startNum int, maxNum int, respChannel chan []int)  {
 
 
 func main() {
-	
+	startTime := time.Now()
 	max := 10000000
 
 	a_max := max / 2
@@ -51,8 +51,8 @@ func main() {
 
 
 	resp = append(resp, respB...)
-
-	fmt.Printf(fmt.Sprintf("identified %d primes", len(resp)))
+	elapsed := time.Since(startTime)
+	fmt.Printf(fmt.Sprintf("identified %d primes in %s seconds", len(resp), elapsed))
 
 
 }
