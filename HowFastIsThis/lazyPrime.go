@@ -7,7 +7,7 @@ import (
 
 func main() {
 	startTime := time.Now()
-	max := 100000
+	max := 10000000
 	primeSlice := []int{}
 	for x := 2; x < max; x++ { 
 		prime := true

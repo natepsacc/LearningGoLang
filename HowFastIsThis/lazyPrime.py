@@ -2,7 +2,7 @@ import time
 
 
 def main():
-    max = 100000
+    max = 10000000
     primes = []
     for x in range (2, max):
         prime = True
