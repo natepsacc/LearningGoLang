@@ -31,7 +31,7 @@ func primeLoop(startNum int, maxNum int, respChannel chan []int)  {
 }
 
 
-func main() {
+func mainO() {
 	startTime := time.Now()
 	max := 10000000
 
@@ -53,6 +53,37 @@ func main() {
 	resp = append(resp, respB...)
 	elapsed := time.Since(startTime)
 	fmt.Printf(fmt.Sprintf("identified %d primes in %s seconds", len(resp), elapsed))
+
+
+}
+
+
+func main() {
+	startTime := time.Now()
+	max := 10000000
+	chunkNums := 64 // arbitrary, write loop to see ideal size
+	chunkSize := max / chunkNums
+	chunkStart := 2
+	chunkEnd := chunkSize
+
+	channel := make(chan []int) 
+
+	for x:=0; x < chunkNums; x++ {
+		go primeLoop(chunkStart, chunkEnd, channel)
+		chunkStart = chunkEnd
+		chunkEnd = chunkEnd + chunkSize
+	}
+	
+	result := []int{}
+	for x:=0; x < chunkNums; x++ {
+		resp := <- channel
+		result = append(result, resp...)
+	}
+
+
+
+	elapsed := time.Since(startTime)
+	fmt.Printf(fmt.Sprintf("identified %d primes in %s seconds", len(result), elapsed))
 
 
 }
