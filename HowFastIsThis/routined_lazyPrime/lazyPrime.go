@@ -83,7 +83,7 @@ func main() {
 
 
 	elapsed := time.Since(startTime)
-	fmt.Printf(fmt.Sprintf("identified %d primes in %s seconds", len(result), elapsed))
+	fmt.Printf(fmt.Sprintf("identified %d primes to %v in %s seconds", len(result), max, elapsed))
 
 
 }
