@@ -2,9 +2,7 @@ package main
 
 import (
 	"fmt"
-	"io"
-	"log"
-	"net/http"
+	"concurrency/fetchpkg"
 )	
 
 
@@ -22,7 +20,7 @@ func main() {
 	channel := make(chan string)
 
 	for i := 0; i < len(urlArr); i++ {
-		go fetch(urlArr[i], channel)
+		go fetchpkg.Fetch(urlArr[i], channel)
 	}
 	
 
